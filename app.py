@@ -4,6 +4,10 @@ import pandas as pd
 import pickle
 import nltk
 
+nltk.download('punkt')
+nltk.download('stopwords')
+
+
 @st.cache_resource
 def load_model():
     analyzer = pickle.load(open('sentiment_model.pkl', 'rb'))
