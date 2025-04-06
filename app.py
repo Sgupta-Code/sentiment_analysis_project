@@ -34,8 +34,8 @@ def main():
             else:
                 st.success(f"Negative Sentiment (Confidence: {confidence:.2f})")
 
-            st.subheader("Processed Text")
-            st.write(analyzer.preprocess_text(text_input))
+            # st.subheader("Processed Text")
+            # st.write(analyzer.preprocess_text(text_input))
 
         else:
             st.warning("PLease enter some text to analyze.")
