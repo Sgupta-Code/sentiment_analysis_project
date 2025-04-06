@@ -2,6 +2,7 @@ import streamlit as st
 from sentiment_analyzer import SentimentAnalyzer
 import pandas as pd
 import pickle
+import nltk
 
 @st.cache_resource
 def load_model():
