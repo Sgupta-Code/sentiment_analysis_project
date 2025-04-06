@@ -15,7 +15,10 @@ import seaborn as sns
 class SentimentAnalyzer:
     def __init__(self):
         nltk.download('stopwords')
-        nltk.download('punkt_tab')
+        try:
+            nltk.data.find('tokenizers/punkt')
+        except LookupError:
+            nltk.download('punkt')
         self.stemmer = PorterStemmer()
         self.stop_words = set(stopwords.words('english'))
         self.vectorizer = None
